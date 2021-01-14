@@ -1,15 +1,52 @@
 /** CSS STYLE **/
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neucha";
+  src: url("../fonts/Neucha.eot");
+  src: local("Neucha"),
+    url("../fonts/Neucha.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Neucha.woff") format("woff"),
+    url("../fonts/Neucha.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  box-sizing: border-box;
   line-height: 1.6em;
   color: #2a2626;
+  /*variables*/
+  --white: #fff;
+  --whiteTransparent: #d7ccc0;
+  --light: #f5f4f0;
+  --main-color: #fe8a02;
+  --main-black: #42413c;
+  --black: #2a2626;
+  --blackTransparent: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
 }
 
-section,
-main {
+.container {
   padding: 100px 0;
   width: 1110px;
   margin: 0 auto;
@@ -20,6 +57,7 @@ h2,
 h3 {
   font-family: "Neucha", sans-serif;
   line-height: 1.2em;
+  margin: 0;
 }
 
 h1 {
@@ -32,4 +70,67 @@ h2 {
 
 h3 {
   font-size: 34px;
+}
+
+.header {
+  position: relative;
+  min-height: 914px;
+  overflow: hidden;
+  background-color: rgba(245, 244, 240, 0.9);
+}
+header::before {
+  content: " ";
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.header-title {
+  color: var(--main-color);
+}
+
+.header-subtitle {
+  font-family: "Neucha", sans-serif;
+  font-size: 72px;
+  line-height: 1em;
+}
+.header-img {
+  position: absolute;
+  top: 55px;
+  right: -270px;
+  height: 525px;
+}
+.header-text {
+  height: 186px;
+  margin-top: 201px;
+  column-count: 2;
+  column-gap: 30px;
+  column-width: 540px;
+}
+.header p {
+  margin-bottom: 16px;
+}
+.header .wrap {
+  break-inside: avoid;
+}
+.header-link {
+  display: block;
+  width: 148px;
+  height: 49px;
+  margin-top: 24px;
+  margin-left: 570px;
+  padding: 12px 24px;
+  background-color: var(--main-color);
+  font-family: "Open Sans Bold";
+  color: var(--white);
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
 }
